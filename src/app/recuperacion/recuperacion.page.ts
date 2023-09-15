@@ -7,9 +7,12 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class RecuperacionPage implements OnInit {
 
-
-  constructor() { }
-
+  handleRefresh(event: any) {
+    setTimeout(() => {
+      // Cualquier llamada para cargar datos va aquí
+      event.target.complete();
+    }, 2000);
+  }
   ngOnInit() {
   }
 
