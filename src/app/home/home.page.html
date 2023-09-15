@@ -1,21 +1,64 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">TeLLevoApp</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <ion-card [ngClass]="{'bounce': animationState === 'end'}" #card>
-      <ion-card-content>Bienvenido, {{ nombre }}.</ion-card-content>
-    </ion-card>
-  </ion-content>
-</ion-content>
+  <!-- Header -->
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>TeLLevoApp</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="menu-opt">
+      <ion-button>
+        <ion-icon name="person-circle-sharp"></ion-icon>
+        Perfil         
+      </ion-button>
+      <ion-button>
+        <ion-icon name="settings-sharp"></ion-icon>
+        Opciones
+      </ion-button>
+      <ion-button>
+        <ion-icon name="help-circle-sharp"></ion-icon>
+        Soporte
+      </ion-button>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>TeLLevoApp</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <!-- Contenido -->
+    <ion-content class="ion-padding">
+      <ion-card [ngClass]="{'bounce': animationState === 'end'}" #card>
+        <ion-card-content>Bienvenido, {{ nombre }}.</ion-card-content>
+      </ion-card>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="home">
+            <ion-icon name="apps-outline"></ion-icon>
+            Page 1
+          </ion-tab-button>
+          <ion-tab-button tab="radio">
+            <ion-icon name="home-outline"></ion-icon>
+            Home
+          </ion-tab-button>
+          <ion-tab-button tab="library">
+            <ion-icon name="apps-outline"></ion-icon>
+            Page 2
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-content>
+  </div>
