@@ -15,9 +15,11 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },  {
-    path: 'log-registro',
-    loadChildren: () => import('./log-registro/log-registro.module').then( m => m.LogRegistroPageModule)
+    path: 'recuperacion',
+    loadChildren: () => import('./recuperacion/recuperacion.module').then( m => m.RecuperacionPageModule)
   },
+
+  
 
 
 ];

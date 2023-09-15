@@ -1,35 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Header</ion-title>
   </ion-toolbar>
 </ion-header>
 
- <ion-grid>
+  <ion-grid [fixed]="true">
     <ion-row class="ion-justify-content-center">
-      <ion-col size="12"> 
-        <ion-text>Bienvenido a TeLLevoApp </ion-text>
-      </ion-col>
+      
+            <ion-col size="12" id="campos"> 
+              <H1>Bienvenido a TeLLevoApp </H1>
+            </ion-col>
+              <ion-input label="Email o Nickname" label-placement="floating" fill="outline" placeholder="Ingrese su email o nickname" helperText="ingrese un email o nickname valido"></ion-input>
+            <ion-col size="12" id="campos">
+              <ion-input label="Password" label-placement="floating" fill="outline" placeholder="Ingrese su password" helperText="ingrese una contraseña valida"></ion-input>
+            </ion-col>
+              <br>
+            <ion-col size="12">
+              <ion-text [routerLink]="['/recuperacion']">¿Has olvidado tu contraseña?</ion-text>
+            </ion-col>
+          <ion-col size="12">
+            <ion-button [routerLink]="['/home']">Iniciar sesion</ion-button>
+          </ion-col>
+
+        
     </ion-row>
- </ion-grid>
-
-<ion-grid>
-  <ion-row class="ion-justify-content-center">
     
-    <ion-col size="12"> 
- 
-        <ion-input label="Email" label-placement="floating" fill="outline" placeholder="Ingrese su email" helperText="ingrese un email valido"></ion-input>
-    
-      <br>
-        <ion-input label="Password" label-placement="floating" fill="outline" placeholder="Ingrese su password" helperText="ingrese una contraseña valida"></ion-input>
-
-        <ion-button expand="block">Ingresar</ion-button>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>TeLLevoApp</ion-title>
-  </ion-toolbar>
-</ion-footer>
