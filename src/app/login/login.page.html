@@ -6,19 +6,20 @@
 
   <ion-grid [fixed]="true">
     <ion-row class="ion-justify-content-center">
-
-              <ion-input label="Email o Nickname" label-placement="floating" fill="outline" placeholder="Ingrese su email o nickname" helperText="ingrese un email o nickname valido"></ion-input>
-            <ion-col size="12" id="campos">
-              <ion-input label="Password" label-placement="floating" fill="outline" placeholder="Ingrese su password" helperText="ingrese una contraseña valida"></ion-input>
-            </ion-col>
-              <br>
-            <ion-col size="12">
-              <ion-text [routerLink]="['/recuperacion']">¿Has olvidado tu contraseña?</ion-text>
-            </ion-col>
-          <ion-col size="12">
-            <ion-button [routerLink]="['/home']">Iniciar sesion</ion-button>
-          </ion-col>
-
-        
+      <ion-col size="12" id="campos">
+        <ion-input [(ngModel)]="nombre" name="nombre" label="Nombre" label-placement="floating" fill="outline" placeholder="Ingrese su nombre" helperText="Ingrese un nombre"></ion-input>
+      </ion-col>
+      <ion-col size="12" id="campos">
+        <ion-input [(ngModel)]="contrasena" name="contrasena" type="password" label="Contraseña" label-placement="floating" fill="outline" placeholder="Ingrese su contraseña" helperText="Ingrese una contraseña válida"></ion-input>
+      </ion-col>
+      <br>
+      <ion-col size="12">
+        <ion-text [routerLink]="['/recuperacion']">¿Has olvidado tu contraseña?</ion-text>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button (click)="ingresarNombre()">Iniciar sesion</ion-button>
+      </ion-col>
+         
     </ion-row>
     
+  
