@@ -4,10 +4,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">recuperacion</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<ion-grid [fixed]="true">
+  <ion-row class="ion-justify-content-center">
+    
+          <ion-col size="12" id="campos"> 
+            <H1>Recuperacion de contraseña</H1>
+          </ion-col>
+            <ion-input label="contraseña" label-placement="floating" fill="outline" placeholder="Ingrese su password" helperText="ingrese una contraseña"></ion-input>
+          <ion-col size="12" id="campos">
+            <ion-input label="repita la contraseña" label-placement="floating" fill="outline" placeholder="Ingrese su password de nuevo" helperText="repita la contraseña"></ion-input>
+          </ion-col>
+            <br>
+        <ion-col size="12">
+          <ion-button [routerLink]="['/login']">Cambiar contraseña</ion-button>
+        </ion-col>
+
+      
+  </ion-row>
+  
