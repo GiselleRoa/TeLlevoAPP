@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { AlertController, NavController } from '@ionic/angular'; 
 import { DataService } from '../data.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
@@ -19,7 +20,7 @@ export class HomePage implements OnInit{
 
   animationState = 'start';
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private navCtrl:NavController) {}
 
   ngOnInit(){
     this.dataService.nombreActual.subscribe((nombre) => {
@@ -31,5 +32,8 @@ export class HomePage implements OnInit{
     }, 1000);
   }
 
+  public cerrarsesion(){
+    this.navCtrl.navigateForward('/login')
+  }
 
 }
