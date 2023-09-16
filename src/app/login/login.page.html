@@ -7,7 +7,7 @@
   <ion-grid [fixed]="true">
     <ion-row class="ion-justify-content-center">
       <ion-col size="12" id="campos">
-        <ion-input [(ngModel)]="nombre" name="nombre" label="Nombre" label-placement="floating" fill="outline" placeholder="Ingrese su nombre" helperText="Ingrese un nombre"></ion-input>
+        <ion-input [(ngModel)]="nombre" name="nombre" label="Nickname" label-placement="floating" fill="outline" placeholder="Ingrese su Nickname" helperText="Ingrese su Nickname"></ion-input>
       </ion-col>
       <ion-col size="12" id="campos">
         <ion-input [(ngModel)]="contrasena" name="contrasena" type="password" label="Contraseña" label-placement="floating" fill="outline" placeholder="Ingrese su contraseña" helperText="Ingrese una contraseña válida"></ion-input>
@@ -19,7 +19,10 @@
       <ion-col size="12">
         <ion-button (click)="ingresarNombre()">Iniciar sesion</ion-button>
       </ion-col>
-         
-    </ion-row>
+        <div class="icon-container" ><ion-icon name="car-sport"></ion-icon></div> 
+
     
-  
+     </ion-row>   
+</ion-grid>
+    
+   
