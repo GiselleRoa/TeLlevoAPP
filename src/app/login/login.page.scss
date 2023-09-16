@@ -1,17 +1,21 @@
-
+ion-col {
+  height: 150px;
+  justify-content: center;
+  outline-color: black;
+}
 .campos {
   height: 150px;
   justify-content: center;
   outline-color: black;
 }
 ion-text{
-  margin-left: 20%;
-  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 ion-button{
-  margin-top: 50px;
-  margin-left: 30%;
- 
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
 }
 ion-input {
   margin-top: 50px;
